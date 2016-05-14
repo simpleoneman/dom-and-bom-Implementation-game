@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #E6EE9C;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.noselect {
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+}
+div#information {
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    height: 300px;
+    padding-left: 10px;
+    opacity: .2;
+}
+div#tank {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 20px;
+    transition: all .3s ease-out 0s;
+    border-radius: 2px;
+    background: #37474F;
+}
+div#tank::before {
+    position: absolute;
+    top: -28px;
+    content: '';
+    opacity: .3;
+    border: 13px solid transparent;
+    border-bottom: 15px solid #7CBB7C;
+}
+div#topTank {
+    position: absolute;
+    left: 5px;
+    width: 16px;
+    height: 20px;
+    background-color: #FBB042;
+}
+div#topTankRound {
+    position: absolute;
+    top: 3px;
+    left: 1px;
+    width: 14px;
+    height: 14px;
+    transition: all 1.5s ease-in-out 0s;
+    border-radius: 50%;
+    background-color: #D28829;
+}
+div#topTankGun {
+    position: absolute;
+    top: -11px;
+    left: 4px;
+    width: 5px;
+    height: 12px;
+    background-color: #D28829;
+}
+div#chargeGun {
+    position: absolute;
+    visibility: hidden;
+    width: 5px;
+    height: 7px;
+    border-radius: 2px 2px 0 0;
+    background-color: #FF5722;
+}
+div#reload {
+    z-index: 10;
+    display: flex;
+    visibility: hidden;
+    width: 150px;
+    height: 150px;
+    opacity: .3;
+    color: #f2f2f2;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    font-size: 20pt;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes moveAround {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
