@@ -89,6 +89,27 @@ div#reload {
     justify-content: center;
     align-items: center;
 }
+.tankLeft{
+  transform: rotate(270deg);
+}
+.tankRight{
+  transform: rotate(90deg);
+}
+.tankTop{
+  transform: rotate(0deg);
+}
+.tankDown{
+  transform: rotate(180deg);
+}
+.gunLeft {
+  transform: rotate(-90deg);
+}
+.gunForward {
+  transform: rotate(0deg);
+}
+.gunRigth {
+  transform: rotate(90deg);
+}
 
 @keyframes moveAround {
     from {
